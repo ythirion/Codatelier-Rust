@@ -1,14 +1,11 @@
-# Codatelier-Rust
+# Créer ma première application Rust 🦀
 
-## Règles du jeu
+Dépôt contenant tout le nécessaire pour l'événement de Février 2026 sur la création de votre première application Rust.
 
-L'objectif du jeu est de deviner un code composé de 4 billes qui peuvent être de 6 couleurs différentes. 
+Vous pouvez retrouver toutes les infos sur l'évènement ici : [[DIJON] Créer ma première application Rust 🦀](https://guild.host/events/dijon-crer-ma-premire-0wqadb)
 
-1) Le joueur propose un code.
+Vous pourrez trouver dans ce dépôt :
 
-2) L'ordinateur compare le vrai code avec celui proposé par l'utilisateur et:
-- Place un drapeau rouge pour chaque bille correctement placée.
-- Place un drapeau blanc pour chaque bille mal placée.
-- Place un drapeau noir pour chaque bille non présente dans le code.
-
-
+🧰 De quoi préparer votre environnement pour l'atelier 🡆 [Préparer son environnemnt](./INSTALL.md)  
+📋 Les différentes parties de l'atelier 🡆 [L'atelier](./atelier)  
+💾 Une version finalisée et documentée des applications 🡆 [Solutions](./release)

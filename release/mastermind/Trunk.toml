@@ -1,0 +1,5 @@
+[build]
+# Specify which binary to build for the web
+bin = "mastermind-web"
+# Enable web features
+features = ["web"]
