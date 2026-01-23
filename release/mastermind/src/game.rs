@@ -24,15 +24,16 @@ pub struct CodeAttempt {
 }
 
 fn create_random_code() -> [char; 4] {
-    let mut available_balls = AVAILABLE_BALLS.clone();
+    let mut available_balls = AVAILABLE_BALLS;
     let mut rng = rand::rng();
     available_balls.shuffle(&mut rng);
-    return [
+
+    [
         available_balls[0],
         available_balls[1],
         available_balls[2],
         available_balls[3],
-    ];
+    ]
 }
 
 pub fn is_valid_char(c: char) -> bool {
@@ -78,10 +79,7 @@ impl Game {
 
 impl Flag {
     pub fn is_right_position(&self) -> bool {
-        match self {
-            Flag::RightPosition => true,
-            _ => false,
-        }
+        matches!(self, Flag::RightPosition)
     }
 }
 

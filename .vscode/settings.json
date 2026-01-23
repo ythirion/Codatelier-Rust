@@ -4,5 +4,10 @@
         "./atelier/mastermind/Cargo.toml",
         "./release/le-juste-prix/Cargo.toml",
         "./release/mastermind/Cargo.toml",
-    ]
+    ],
+    "rust-analyzer.check.command": "clippy",
+    "editor.formatOnSave": true,
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    }
 }

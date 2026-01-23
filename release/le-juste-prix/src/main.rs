@@ -35,7 +35,7 @@ fn main() {
 fn generate_random_number_between(min: u32, max: u32) -> u32 {
     use rand::Rng;
 
-    rand::thread_rng().gen_range(min..=max)
+    rand::rng().random_range(min..=max)
 }
 
 /// lit l'entrée standard
