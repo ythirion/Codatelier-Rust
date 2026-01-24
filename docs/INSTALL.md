@@ -2,13 +2,13 @@
 
 Pour éviter les installations fastidieuses et commencer à coder immédiatement, nous allons utiliser **GitHub Codespaces** pour cet atelier.
 
-> **GitHub Codespaces**, c'est quoi ? Imagine une machine de développement complète qui se lance en quelques secondes, directement dans ton navigateur. Pas besoin d'installer Rust, Trunk ou quoi que ce soit sur ton ordinateur : tout est déjà prêt dans le cloud. Tu ouvres le dépôt, tu lances ton Codespace, et hop, tu codes ! Et quand tu fermes l'onglet, tout s'éteint automatiquement pour économiser les ressources.
+> **GitHub Codespaces, c'est quoi ?** Imagine une machine de développement complète qui se lance en quelques secondes, directement dans ton navigateur. Pas besoin d'installer Rust, Trunk ou quoi que ce soit sur ton ordinateur : tout est déjà prêt dans le cloud. Tu ouvres le dépôt, tu lances ton Codespace, et hop, tu codes ! Et quand tu fermes l'onglet, tout s'éteint automatiquement pour économiser les ressources.
 
 ## Ce dont tu as besoin
 
 C'est tout simple :
 - **Un ordinateur** (Windows, Linux, Mac, peu importe)
-- **Un compte GitHub** (gratuit)
+- **Un compte GitHub** ([gratuit](https://github.com/signup))
 
 ## Préparer l'atelier
 
@@ -45,6 +45,18 @@ trunk 0.21.14
 Si tu vois ces trois lignes, c'est tout bon ! 🎉 Ton environnement est prêt.
 
 ## Le jour de l'atelier
+
+### 1. Synchronise ton fork
+
+Avant de commencer, assure-toi d'avoir la dernière version de l'atelier :
+
+1. Va sur **ton** dépôt forké (github.com/ton-pseudo/Codatelier-Rust)
+2. Si tu vois un message indiquant que ton fork est en retard, clique sur **Sync fork**
+3. Clique sur **Update branch** pour récupérer les dernières modifications
+
+> 💡 **Pourquoi ?** Des ajustements ou corrections ont peut-être été apportés depuis ta préparation. Cette étape garantit que tu as bien tous les contenus à jour !
+
+### 2. Lance ton Codespace
 
 Pour retrouver ton Codespace le jour J, rien de plus simple :
 

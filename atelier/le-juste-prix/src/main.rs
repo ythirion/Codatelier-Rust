@@ -1,3 +1,5 @@
+#![allow(dead_code, unused_imports)]
+
 use std::cmp::Ordering;
 use std::io;
 
@@ -5,30 +7,18 @@ use std::io;
 fn main() {
     println!("== Le juste prix ==");
 
-    let random_number = generate_random_number_between(1, 100);
+    todo!();
 
-    let mut found = false;
+    // récupérer un nombre aléatoir enetre 1 & 100
 
-    while !found {
-        println!("Quel est le juste prix ?");
+    // créer un mutex pour sortir de la boucle de jeu
 
-        let guess = get_input_from_user();
-
-        if let Ok(num) = guess.trim().parse::<u32>() {
-            print!("Vous proposez : {num}");
-
-            match num.cmp(&random_number) {
-                Ordering::Less => println!(" -> C'est plus !"),
-                Ordering::Greater => println!(" -> C'est moins !"),
-                Ordering::Equal => {
-                    println!(" -> Gagné !");
-                    found = true;
-                }
-            }
-        } else {
-            println!("ERREUR: saisie invalide !");
-        }
-    }
+    // tant que le mutex est à false
+    //      demander une entrée à l'utilisateur
+    //      trimmer puis transformer l'entrée utilisateur en entier non signé (u32)
+    //      comparer l'entrée utilisateur au nombre aléatoire
+    //      donner le résultat à l'utilisateur
+    //      si l'entrée est égale au nombre aléatoire, la boucle de jeu s'arrête
 }
 
 /// Generates a random u32 number between min and max included.
