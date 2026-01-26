@@ -4,12 +4,27 @@ use yew::prelude::*;
 
 use crate::game::is_valid_char;
 
+/// The GuessBall component's properties. It uses a `<select>` html component.
+///
+/// # Fields
+///
+/// - `value` (`char`) - The `<select>`'s initial value.
+/// - `onchange` (`Callback<char>`) - The `<select>`'s on change callback.
 #[derive(Clone, PartialEq, Properties)]
 pub struct GuessBallProps {
     pub value: char,
     pub onchange: Callback<char>,
 }
 
+/// The GuessBall Html component.
+///
+/// # Arguments
+///
+/// - `props` (`&GuessBallProps`) - The component's properties.
+///
+/// # Returns
+///
+/// - `Html` - Returns an Html component.
 #[function_component(GuessBall)]
 pub fn guess_ball(props: &GuessBallProps) -> Html {
     let props = props.clone();
@@ -38,6 +53,15 @@ pub fn guess_ball(props: &GuessBallProps) -> Html {
     }
 }
 
+/// Attempts to extract the value from the `<select>`'s on change callback.
+///
+/// # Arguments
+///
+/// - `e` (`Event`) - The captured event.
+///
+/// # Returns
+///
+/// - `Option<char>` - Returns the `<select>`'s char value from the event. Returns None if the value can not be extracted.
 fn get_value_from_select_event(e: Event) -> Option<char> {
     let event: Event = e.dyn_into().ok()?;
     let event_target = event.target()?;

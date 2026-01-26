@@ -2,7 +2,7 @@
 
 ## Mode CLI
 ```bash
-argo run --bin mastermind-cli --features cli
+cargo run --bin mastermind-cli --features cli
 ```
 
 ## Mode web

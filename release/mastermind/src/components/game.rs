@@ -4,6 +4,11 @@ use crate::components::{
     code_attempt::CodeAttempt, game_over::GameOver, guess_code::GuessCode, start_game::StartGame,
 };
 
+/// The Game Html component.
+///
+/// # Returns
+///
+/// - `Html` - Returns an Html component.
 #[function_component(Game)]
 pub fn game() -> Html {
     let game_state = use_state(|| crate::game::Game::new(false));

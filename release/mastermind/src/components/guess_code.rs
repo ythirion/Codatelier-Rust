@@ -2,11 +2,25 @@ use yew::prelude::*;
 
 use crate::{components::guess_ball::GuessBall, game::is_valid_char};
 
+/// The GuessCode component's properties.
+///
+/// # Fields
+///
+/// - `onsubmit` (`Callback<[char; 4]>`) - The on submit event callbak.
 #[derive(Clone, PartialEq, Properties)]
 pub struct GuessCodeProps {
     pub onsubmit: Callback<[char; 4]>,
 }
 
+/// The GuessCode's Html component.
+///
+/// # Arguments
+///
+/// - `props` (`&GuessCodeProps`) - The component's properties.
+///
+/// # Returns
+///
+/// - `Html` - Returns an Html component.
 #[function_component(GuessCode)]
 pub fn guess_code(props: &GuessCodeProps) -> Html {
     let props = props.clone();

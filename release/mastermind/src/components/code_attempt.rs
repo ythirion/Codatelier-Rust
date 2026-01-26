@@ -2,11 +2,25 @@ use yew::prelude::*;
 
 use crate::{components::ball::Ball, components::flag::Flag};
 
+/// The CodeAttempt component's properties.
+///
+/// # Fields
+///
+/// - `code_attempt` (`crate`) - The code attempt's structure.
 #[derive(Clone, PartialEq, Properties)]
 pub struct CodeAttemptProps {
     pub code_attempt: crate::game::CodeAttempt,
 }
 
+/// The CodeAttempt Html component.
+///
+/// # Arguments
+///
+/// - `props` (`&CodeAttemptProps`) - The component's properties.
+///
+/// # Returns
+///
+/// - `Html` - Returns an Html component.
 #[function_component(CodeAttempt)]
 pub fn code_attempt(props: &CodeAttemptProps) -> Html {
     let props = props.clone();
