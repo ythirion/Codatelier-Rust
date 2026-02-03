@@ -6,19 +6,34 @@ use std::io;
 // release
 fn main() {
     println!("== Le juste prix ==");
+    let juste_prix = generate_random_number_between(1, 100);
+    let mut found = false;
 
-    todo!();
+    while !found {
+        println!("Quel est le juste prix ?");
 
-    // récupérer un nombre aléatoir enetre 1 & 100
+        match get_input_from_user().trim().parse::<u32>() {
+            Ok(guess) => found = process_number(guess, juste_prix),
+            Err(e) => println!("Erreur: {}", e),
+        }
+    }
+}
 
-    // créer un mutex pour sortir de la boucle de jeu
-
-    // tant que le mutex est à false
-    //      demander une entrée à l'utilisateur
-    //      trimmer puis transformer l'entrée utilisateur en entier non signé (u32)
-    //      comparer l'entrée utilisateur au nombre aléatoire
-    //      donner le résultat à l'utilisateur
-    //      si l'entrée est égale au nombre aléatoire, la boucle de jeu s'arrête
+fn process_number(guess: u32, juste_prix: u32) -> bool {
+    match guess {
+        number if number == juste_prix => {
+            println!("Gagné !!! 🍌🍌🍌");
+            true
+        }
+        number if number < juste_prix => {
+            println!("{} est trop petit", guess);
+            false
+        }
+        _ => {
+            println!("{} est trop grand", guess);
+            false
+        }
+    }
 }
 
 /// Generates a random u32 number between min and max included.
