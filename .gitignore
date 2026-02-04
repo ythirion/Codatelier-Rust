@@ -22,3 +22,5 @@ target
 
 # dist folder for generated files
 **/dist/
+
+.DS_Store
