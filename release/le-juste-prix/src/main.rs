@@ -1,32 +1,37 @@
+#![allow(dead_code, unused_imports)]
+
 use std::cmp::Ordering;
 use std::io;
 
 // release
 fn main() {
     println!("== Le juste prix ==");
-
-    let random_number = generate_random_number_between(1, 100);
-
+    let juste_prix = generate_random_number_between(1, 100);
     let mut found = false;
 
     while !found {
         println!("Quel est le juste prix ?");
 
-        let guess = get_input_from_user();
+        match get_input_from_user().trim().parse::<u32>() {
+            Ok(guess) => found = process_number(guess, juste_prix),
+            Err(e) => println!("Erreur: {}", e),
+        }
+    }
+}
 
-        if let Ok(num) = guess.trim().parse::<u32>() {
-            print!("Vous proposez : {num}");
-
-            match num.cmp(&random_number) {
-                Ordering::Less => println!(" -> C'est plus !"),
-                Ordering::Greater => println!(" -> C'est moins !"),
-                Ordering::Equal => {
-                    println!(" -> Gagné !");
-                    found = true;
-                }
-            }
-        } else {
-            println!("ERREUR: saisie invalide !");
+fn process_number(guess: u32, juste_prix: u32) -> bool {
+    match guess {
+        number if number == juste_prix => {
+            println!("Gagné !!! 🍌🍌🍌");
+            true
+        }
+        number if number < juste_prix => {
+            println!("{} est trop petit", guess);
+            false
+        }
+        _ => {
+            println!("{} est trop grand", guess);
+            false
         }
     }
 }

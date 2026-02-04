@@ -2,25 +2,11 @@ use yew::prelude::*;
 
 use crate::components::ball::Ball;
 
-/// The GameOver component's properties.
-///
-/// # Fields
-///
-/// - `game` (`crate`) - The game instance.
 #[derive(Clone, PartialEq, Properties)]
 pub struct GameOverProps {
     pub game: crate::game::Game,
 }
 
-/// The GameOver Html component.
-///
-/// # Arguments
-///
-/// - `props` (`&GameOverProps`) - The component's properties.
-///
-/// # Returns
-///
-/// - `Html` - Returns an Html component.
 #[function_component(GameOver)]
 pub fn game_over(props: &GameOverProps) -> Html {
     let props = props.clone();

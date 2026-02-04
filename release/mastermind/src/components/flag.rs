@@ -1,24 +1,10 @@
 use yew::prelude::*;
 
-/// The Flag component's properties.
-///
-/// # Fields
-///
-/// - `flag` (`crate`) - The Flag enum variant.
 #[derive(Clone, PartialEq, Properties)]
 pub struct FlagProps {
     pub flag: crate::game::Flag,
 }
 
-/// The Flag Html component.
-///
-/// # Arguments
-///
-/// - `props` (`&FlagProps`) - The component's properties.
-///
-/// # Returns
-///
-/// - `Html` - Returns an Html component.
 #[function_component(Flag)]
 pub fn flag(props: &FlagProps) -> Html {
     let color = match props.flag {

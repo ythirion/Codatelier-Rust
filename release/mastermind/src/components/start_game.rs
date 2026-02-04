@@ -1,24 +1,10 @@
 use yew::prelude::*;
 
-/// The StartGame component's properties.
-///
-/// # Fields
-///
-/// - `start_game` (`Callback<()>`) - The start game callback.
 #[derive(Clone, PartialEq, Properties)]
 pub struct StartGameProps {
     pub start_game: Callback<()>,
 }
 
-/// The StartGame Html component.
-///
-/// # Arguments
-///
-/// - `props` (`&StartGameProps`) - The component's properties..
-///
-/// # Returns
-///
-/// - `Html` - Returns an Html component.
 #[function_component(StartGame)]
 pub fn start_game(props: &StartGameProps) -> Html {
     let props = props.clone();
