@@ -42,6 +42,10 @@ jobs:
         run: |
           cargo install --locked trunk || true
 
+      - name: Clean dist
+        working-directory: ./release/mastermind
+        run: rm -rf dist/*
+
       - name: Build with Trunk
         working-directory: ./release/mastermind
         run: trunk build --release --public-url /${{ github.event.repository.name }} --filehash true
