@@ -375,7 +375,6 @@ h1::before {
 
 .guess-code select {
     font-size: 2rem;
-    width: 4rem;
     color: var(--force-light);
     background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(10, 14, 39, 0.9) 100%);
     border: 2px solid var(--jedi-blue);
