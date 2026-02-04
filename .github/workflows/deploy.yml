@@ -48,7 +48,7 @@ jobs:
 
       - name: Build with Trunk
         working-directory: ./release/mastermind
-        run: trunk build --release --public-url /${{ github.event.repository.name }} --filehash true
+        run: trunk build --release --public-url . --filehash true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
